@@ -1,0 +1,75 @@
+USE [CnmPro]
+GO
+/****** Object:  StoredProcedure [dbo].[Messages_Insert]    Script Date: 9/1/2022 4:27:45 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+ALTER PROC [dbo].[Messages_Insert]
+
+			@Message nvarchar(1000)
+           ,@Subject nvarchar(100)
+           ,@RecipientId int
+           ,@SenderId int
+           ,@DateSent datetime2
+		   ,@DateRead datetime2
+		   ,@Id int OUTPUT
+         
+    
+
+
+/*---Test Code Start---
+
+SELECT * FROM dbo.Messages
+
+DECLARE  @Id int = 0
+
+DECLARE 
+		@Message nvarchar(1000) = '20Aug22'
+		,@Subject nvarchar(100) = 'Morning Greeting'
+		,@RecipientId int = '22'
+		,@SenderId int = '135'
+		,@DateSent datetime2 = '08-20-2022'
+		,@DateRead datetime2 = '08-20-2022'
+
+EXECUTE	[dbo].[Messages_Insert]
+			@Message 
+           ,@Subject 
+           ,@RecipientId 
+           ,@SenderId 
+           ,@DateSent
+		   ,@DateRead
+		   ,@Id OUTPUT
+
+SELECT * FROM dbo.Messages
+
+Where Id = @Id 
+
+
+*/---Test Code End---
+
+AS
+
+BEGIN
+
+INSERT INTO [dbo].[Messages]
+           ([Message]
+           ,[Subject]
+           ,[RecipientId]
+           ,[SenderId]
+           ,[DateSent]
+		   ,[DateRead])
+           
+VALUES
+        	(@Message 
+           ,@Subject 
+           ,@RecipientId 
+           ,@SenderId 
+           ,@DateSent
+		   ,@DateRead) 
+		   SET @Id = SCOPE_IDENTITY()
+
+END
