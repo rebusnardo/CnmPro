@@ -1,0 +1,107 @@
+.background-color-messages {
+    background-color: white;
+}
+
+.button-send-message {
+    border: none;
+}
+
+.cardTitle-text-opacity {
+    font-size: 10px;
+    opacity: 25;
+}
+
+.chatBox-chatlist__item {
+    display: flex;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.chatBox-text-chats {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.chatbox-inputBar-styling {
+    max-width: 450px;
+    min-width: 450px;
+    min-height: 50px;
+    margin-left: 50px;
+    border: none;
+}
+
+.chatBox-inputBarOutline-styling {
+    background-color: rgb(243, 237, 237);
+    margin-top: 25px;
+    max-width: 650px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.chat__item__content {
+    color: black;
+    max-width: 65%;
+    min-width: auto;
+    font-size: small;
+    border-radius: 5px 5px 5px;
+}
+
+.chatBox-receiverStyling-coloring {
+    background-color: rgb(250, 243, 219);
+}
+
+.chatBox-senderStyling-coloring {
+    background-color: rgb(243, 237, 237);
+}
+
+.chatBox-submitButton-styling {
+    max-width: 100px;
+    height: 50px;
+    margin-left: 50px;
+    background-color: aquamarine;
+    border: none;
+    width: 50px;
+}
+
+.chatBox-submitButton-boxShadow {
+    color: rgb(219, 216, 205);
+    box-shadow: 1px 1px;
+}
+
+.chatBox-submitButton-bsFill {
+    height: 25px;
+    width: auto;
+    color: aliceblue;
+}
+
+.messages-avatar-chatBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    margin-top: 10px;
+}
+
+.messages-avatar-cardTitle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.messages-chatBox-main {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.messages-userProfile-main {
+    margin-bottom: 25px;
+}
+.messages-chatBox-scoller {
+    height: 650px;
+    overflow: auto;
+}
